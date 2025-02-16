@@ -1,11 +1,11 @@
-FROM fedora:32 as stage
+FROM fedora:34 as stage
 
 SHELL ["/usr/bin/bash", "-euxvc"]
 
 RUN dnf install -y p7zip-plugins glibc.i686 zlib.i686 xz libxml2.i686; \
     dnf clean all
 
-ARG ISO_IMAGE=VMware-VMvisor-Installer-201701001-4887370.x86_64.iso
+ARG ISO_IMAGE=VMware-VMvisor-Installer-7.0U3k-19482537.x86_64.iso
 ADD ${ISO_IMAGE} /esxi.iso
 
 # Extract all the files from the ISO, and gunzip all the zip files
