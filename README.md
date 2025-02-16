@@ -1,3 +1,9 @@
+# Table of Contents
+- [Setup](#setup)
+- [Usage](#usage)
+- [Issues](#issues)
+- [Thanks](#thanks)
+
 This is an attempt to create a docker environment for ESXi, with the goal to be able to compile ESXi plugins directly in this esxi image. No more "try it in an old OS and hope the binaries are compatible"
 
 ***This is NOT running ESXi VMs in Docker. That's just not possible. This only lets you run some of the ESXi's binaries, which is only useful for testing, debugging, and compiling packages to install into a real ESXi server.***
@@ -20,11 +26,11 @@ docker image. BYOD - Build Your Own Docker (image). Update: Tested with ESXi 7.0
 
     - Also acceptable:
 
-          docker build --build-arg ISO_IMAGE=VMware-VMvisor-Installer-7.0U3k-19482537.x86_64.iso -t andyneff/esxi .
+          docker build --build-arg ISO_IMAGE=VMware-VMvisor-Installer-7.0U3k-19482537.x86_64.iso -t poppopjmp/esxi .
 
     - **Note**: this can only be a relative path to the docker context. No absolute path will work.
 
-4. And now, you have an ESXi base image. `andyneff/esxi`
+4. And now, you have an ESXi base image. `poppopjmp/esxi`
 
 # Usage
 
